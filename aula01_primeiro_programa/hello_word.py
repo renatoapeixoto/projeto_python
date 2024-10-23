@@ -7,3 +7,4 @@ print('*' * 70)
 print('Hello Word !!!')
 print('*' * 70)
 print()
+valor = int(input('digite um valor: ')) # casting -> mecanismo para alterar mudança de tipo
