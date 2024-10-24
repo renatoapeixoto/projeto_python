@@ -1,8 +1,8 @@
 # limpar tela 
 import os
-from colorama import Fore, Back, Style, init
-
 os.system('cls')
+
+from colorama import Fore, Back, Style, init
 init(autoreset=True)
 
 print(Fore.MAGENTA +'-' * 70)
