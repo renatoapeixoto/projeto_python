@@ -1,10 +1,9 @@
-# biblioteca para limpa a tela 
+# imports 
 import os
-os.system('cls')
-
-# biblioteca para colorir as letras
 from colorama import Fore, Back, Style, init
-init(autoreset=True)
+
+os.system('cls') # limpa a tela
+init(autoreset=True) # auto resetar a biblioteca colorama
 
 #inicio do codigo
 print(Back.CYAN + Style.BRIGHT + '                     OPERADORES ARITMÉTICOS                           ')

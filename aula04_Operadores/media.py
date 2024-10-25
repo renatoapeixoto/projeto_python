@@ -1,6 +1,7 @@
 # imports
 import os
 
+#limpar a tela
 os.system('cls')
 
 print('-'*70)
