@@ -16,6 +16,12 @@ os.system('cls')
 ano = int(input('Digite um ano: '))
 resultado = ''
 
+#Função ano bissexto
+# def eh_bissexto(ano):
+#     return ano % 4 == 0 and (ano % 100 != 0 or ano % 400 == 0)
+# print(eh_bissexto(2020))  # Saída: True
+# print(eh_bissexto(1900))  # Saída: False
+
 # Processamento 01
 # if ano < 1582 :
 #     print('Não está dentro do período do calendário gregoriano')
