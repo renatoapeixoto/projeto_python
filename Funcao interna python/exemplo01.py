@@ -21,10 +21,13 @@ ca = 10  # cateto adjacente
 # Processamento
 potencia = math.pow(base, expoente)
 raizQuadrada = math.sqrt(radicando)
+hipotenusa = math.hypot(co, ca)
+
+# Para achar o sin, con e tan, precisa achar também o radiando do angulo
 seno = math.sin(math.radians(angulo))
 cosseno = math.cos(math.radians(angulo))
 tangente = math.tan(math.radians(angulo))
-hipotenusa = math.hypot(co, ca)
+
 
 # Saída
 print(f'{base} elevado a {expoente} é igual a: {potencia}')
