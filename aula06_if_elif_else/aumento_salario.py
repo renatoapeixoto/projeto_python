@@ -8,11 +8,12 @@
 # informado não seja igual a zero ou negativo, pois isso não seria válido.
 
 # imports
-import os
+#import os
+#os.system('cls')
 
-
-# limpa a tela
-os.system('cls')
+# A partir da biblioteca os importe o comando system
+from os import system
+system('cls') # limpa a tela
 
 # Entradas e declarações
 salario = float(input('Digite o salário do funcionario: '))
@@ -35,7 +36,7 @@ while True :
             aumento = '10%'
             break
 
-# Saida
-print(f'O salário de R$ {salario}, aumentou {aumento}, passando para'
-      f' R$ {novo_salario}')
-print('')
+# Saida - Testando quebra de linha com print
+print(f'O salário de R$ {salario:.2f}, aumentou {aumento}, passando para'
+      f' R$ {novo_salario:.2f}'
+      ' Reais.\n')  

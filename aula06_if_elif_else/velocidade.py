@@ -19,8 +19,8 @@ resultado = ''
 
 # Processamento
 if velocidade <= 60 :
-    resultado = 'Você está dentro do intervalo de velocidade ideal, não\n' 
-    'ultrapasse a velocidade de 60 km/h.'
+    resultado = 'Você está dentro do intervalo de velocidade ideal, não\
+ ultrapasse a velocidade de 60 km/h.'
 else :
     resultado = 'Atenção !!! Acima da velocidade permitida.'
     winsound.Beep(1000, 900)  # Som de 1000 Hz por 500 ms

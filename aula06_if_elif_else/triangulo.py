@@ -19,7 +19,7 @@ b = float(input('Digite o segmento < b > do triângulo: '))
 c = float(input('Digite o segmento < c > do triângulo: '))
 
 # Processamento
-if (a+b)>c and (a+c)>b and (b+c)>a :
+if (a + b) > c and ( a + c ) > b and ( b + c ) > a :
     resultado = 'É um triangulo'
 else :
     resultado = 'Não é um triangulo'

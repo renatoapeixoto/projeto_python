@@ -22,7 +22,7 @@ menor = 0
 igual = 0
 
 # valor igual
-if valor1 == valor2 and valor2 == valor3:
+if valor1 == valor2 and valor1 == valor3:
     igual = valor1
     print(f'Os tres números são iguais.')
 else:
