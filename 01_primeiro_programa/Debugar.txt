@@ -24,7 +24,8 @@ chamada variável idade, você poderá ver quantos anos ela está armazenando.
     F11 para entrar em uma função e ver o que ela está fazendo por dentro.
     Shift + F11 para sair da função e voltar para o código principal.
 
-6 - Verificando Variáveis​​Quando o código está parado, você pode ver o valor de 
+6 - Verificando Variáveis​
+​Quando o código está parado, você pode ver o valor de 
 todas as variáveis ​​no painel lateral. Isso é útil para entender se os valores 
 estão corretos. Se você quiser ver algo específico, pode adicionar uma variável 
 no painel "Watch" (Observação) e acompanhar o valor dela enquanto o código roda.
