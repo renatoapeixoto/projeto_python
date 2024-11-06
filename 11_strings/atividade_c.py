@@ -7,5 +7,12 @@ import os
 os.system('cls' if os.name == 'nt' else 'clear')
 
 nome = input('Digite um nome: ')
-verificar = nome in 'oliveira'
-input(verificar)
+nome = nome.title()
+nome_contido = 'Oliveira' in nome
+if nome :
+    if nome_contido :
+        print(f'Oliveira está contido em: {nome}')
+    else :
+        print(f'Oliveira não está contido em: {nome}')
+else :
+    print('Nome inválido')

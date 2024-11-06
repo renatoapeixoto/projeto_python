@@ -8,5 +8,6 @@ os.system('cls' if os.name == 'nt' else 'clear')
 
 nome = 'João da Silva'
 print(f'Nome orignal: {nome} \n')
+
 novo_nome = nome.replace('Silva', 'Oliveira')
 print(f'O novo nome: {novo_nome} \n')

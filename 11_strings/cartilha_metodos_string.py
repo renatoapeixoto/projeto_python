@@ -21,7 +21,7 @@ cpf = '15389731821'
 print('O cpf tem ' + str(len(cpf)) + ' digitos.')
 
 # capitalize() -> Coloca a 1ª letra Maiúscula
-texto = 'renato'
+texto = 'renato amaro peixoto'
 print(texto.capitalize())
 
 ''' casefold() -> Transforma todas as letras em minúsculas (existe lower() mas o 
@@ -42,9 +42,13 @@ print(texto.endswith('gmail.com'))
 print(texto.endswith('.com'))
 
 ''' find() -> Procura um texto dentro de outro texto e dá como resposta a posição 
-do texto encontrado. '''
+do texto encontrado. A procura é da esquerda para direita '''
 texto = 'peixoto.sd@gmail.com'
 print(texto.find('@'))
+
+# rfind() -> Procura da esquerda para direita, mostra a posiçõa.
+texto = 'peixoto.sd@gmail.com'
+print(texto.rfind('o'))
 
 # format() -> Formata uma string de acordo com os valores passados. 
 faturamento = 1000
