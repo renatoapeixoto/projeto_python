@@ -1,9 +1,21 @@
 # Importando as bibliotecas necessárias
 import os
-from datetime import datetime, date
+from datetime import datetime
+from datetime import date
 
 # Limpando o terminal
 os.system('cls' if os.name == 'nt' else 'clear')
+
+data_hora_formatada = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+hora_h = datetime.now().time().hour
+hora_m = datetime.now().time().minute
+hora_s = datetime.now().time().second
+
+data = datetime.now().date()
+data_ano = datetime.now().date().year
+data_mes = datetime.now().date().month
+data_dia = datetime.now().date().day
+
 
 # Obtendo a data e hora atuais
 data_atual = datetime.now()
