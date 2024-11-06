@@ -1,10 +1,14 @@
 # Importando as bibliotecas necessárias
 import os
-from datetime import datetime
-from datetime import date
-
-# Limpando o terminal
 os.system('cls' if os.name == 'nt' else 'clear')
+
+from datetime import date
+print(f"Data atual no sistema: {date.today()}")
+
+from datetime import datetime
+print(f"Data atual no sistema: {datetime.date.today()}")
+# Limpando o terminal
+
 
 data_hora_formatada = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 hora_h = datetime.now().time().hour
