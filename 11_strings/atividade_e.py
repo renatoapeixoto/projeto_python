@@ -15,4 +15,13 @@ u = frase.count('u')
 
 total = a + e + i + o + u
 
-print(total)
+print(f'A vogal "a" foi utilizada: {a} vezes.')
+print(f'A vogal "e" foi utilizada: {e} vezes.')
+print(f'A vogal "i" foi utilizada: {i} vezes.')
+print(f'A vogal "o" foi utilizada: {o} vezes.')
+print(f'A vogal "u" foi utilizada: {u} vezes.')
+print(f'Total utilizada: {total} vezes.')
+
+
+
+

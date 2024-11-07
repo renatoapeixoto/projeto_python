@@ -8,6 +8,6 @@ nome = input('Digite um Nome: ')
 nome = nome.title()
 
 nome = nome.split()
-tamanho = len(nome)
 
-print(nome)
+for i in range(len(nome)) :
+    print(nome[i])

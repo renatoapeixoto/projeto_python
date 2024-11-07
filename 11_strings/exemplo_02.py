@@ -60,6 +60,8 @@ print('-' * 70)
 # Unindo uma lista de palavras em uma string com separador
 lista = ['Olá', 'mundo']
 juncao = "_".join(lista)  # Junta a lista em uma string com "_" como separador
+juncao1 = ' '.join(lista)
 print(f"Lista original: {lista}")
 print(f"Lista unida em string: {juncao}")
+print(f"Lista unida em string: {juncao1}")
 print('-' * 70)
