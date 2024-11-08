@@ -12,9 +12,10 @@ print('CÁLCULO DA IDADE')
 ano_atual = 2024
 
 # Entrada
-ano = int(input('Digite o ano de nascimento: '))
+ano_nasc = int(input('Digite o ano de nascimento: '))
 
-idade = ano_atual - ano
+ # processamento
+idade = ano_atual - ano_nasc
 
 # Saída
 print(f'Você tem {idade} anos!')
