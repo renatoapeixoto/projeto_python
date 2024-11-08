@@ -4,8 +4,6 @@
 
 # Importando as bibliotecas
 import os
-
-
 os.system('cls')
 
 print('-'*70)
@@ -13,7 +11,6 @@ print('Programa que calcula a quantidade de "o" e posição na String')
 print('-'*70)
 
 nome = str(input('Entre com o nome do aluno: ')).lower()
-
 quant_o = nome.count('o')
 
 # +1: indica a posição na frase, não no índice
@@ -25,3 +22,9 @@ print(f'O caracter "o" aparece {quant_o} vezes')
 print(f'O caracter "o" aparece a primeira vez na posição {primeiro_o}')
 print(f'O caracter "o" aparece a pela última vez na posição {ultimo_o}')
 print('-'*70)
+
+# outra solução
+print(nome.find('o') + 1)
+nome = nome[::-1]
+tamanho = len(nome)
+print(- nome.find('o') + tamanho)
