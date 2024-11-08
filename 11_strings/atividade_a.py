@@ -14,3 +14,4 @@ if nome and nome_meio and nome_ultimo :
     print(f'O nome completo é: {nome_completo} ')
 else :
     print('Nome está invalido')
+
