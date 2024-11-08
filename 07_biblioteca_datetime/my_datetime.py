@@ -42,6 +42,8 @@ print('Data atual: ', data_atual)
 data_formatada = data_atual.strftime("%d/%m/%Y")
 data_hora_formatada = data_atual.strftime("%d/%m/%Y %H:%M")
 
+
+
 # Exibindo a data e a data/hora formatadas
 print(f'Data formatada: {data_formatada}')
 print(f'Data e hora formatadas: {data_hora_formatada}')
