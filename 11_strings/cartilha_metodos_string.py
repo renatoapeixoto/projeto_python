@@ -37,15 +37,6 @@ print(texto.capitalize())
 # Renato amaro peixoto
 print('-------------------------------------------------------------------------')
 
-''' casefold() -> Transforma todas as letras em minúsculas (existe lower() mas o 
-casefold é melhor normalmente. '''
-texto = 'RENATO'
-print(texto.casefold())
-print(texto.lower())
-# renato
-# renato
-print('-------------------------------------------------------------------------')
-
 # count()-> Quantidade de vezes que um valor aparece na string
 texto = 'peixoto.sd@gmail.com'
 print(texto.count('.'))
@@ -165,6 +156,24 @@ print(texto.splitlines())
  'Faturamento = R$2.500,00']'''
 print('-------------------------------------------------------------------------')
 
+# Unindo uma lista de palavras em uma string com separador
+lista = ['Olá', 'mundo']
+print(len(lista)) # 2
+juncao = "_".join(lista)  # Junta a lista em uma string com "_" como separador
+print(len(juncao)) # 9
+juncao1 = ' '.join(lista)
+print(len(juncao1)) # 9
+print(f"Lista original: {lista}")
+print(f"Lista unida em string: {juncao}")
+print(f"Lista unida em string: {juncao1}")
+print('-' * 70)
+# 2
+# 9
+# 9
+# Lista original: ['Olá', 'mundo']
+# Lista unida em string: Olá_mundo
+# Lista unida em string: Olá mundo
+print('-------------------------------------------------------------------------')
 
 # startswith() -> Verifica se a string começa com determinado texto
 texto = 'BEB123453'
@@ -198,6 +207,15 @@ print('-------------------------------------------------------------------------
 texto = 'beb12343'
 print(texto.upper())
 # BEB123453
+print('-------------------------------------------------------------------------')
+
+''' casefold() -> Transforma todas as letras em minúsculas (existe lower() mas o 
+casefold é melhor normalmente. '''
+texto = 'RENATO'
+print(texto.casefold())
+print(texto.lower())
+# renato
+# renato
 print('-------------------------------------------------------------------------')
 
 # Unindo uma lista de palavras em uma string com separador
