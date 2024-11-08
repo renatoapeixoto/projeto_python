@@ -54,15 +54,6 @@ print(texto.count('a'))
 # 1
 print('-------------------------------------------------------------------------')
 
-''' endswith() -> Verifica se o texto termina com um valor específico e 
-dá como resposta True ou False '''
-texto = 'peixoto.sd@gmail.com'
-print(texto.endswith('gmail.com'))
-print(texto.endswith('.com'))
-# True
-# True
-print('-------------------------------------------------------------------------')
-
 ''' find() -> Procura um texto dentro de outro texto e dá como resposta a posição 
 do texto encontrado. A procura é da esquerda para direita '''
 texto = 'peixoto.sd@gmail.com'
@@ -178,6 +169,15 @@ print('-------------------------------------------------------------------------
 # startswith() -> Verifica se a string começa com determinado texto
 texto = 'BEB123453'
 print(texto.startswith('BEB')) # True
+# True
+print('-------------------------------------------------------------------------')
+
+''' endswith() -> Verifica se o texto termina com um valor específico e 
+dá como resposta True ou False '''
+texto = 'peixoto.sd@gmail.com'
+print(texto.endswith('gmail.com'))
+print(texto.endswith('.com'))
+# True
 # True
 print('-------------------------------------------------------------------------')
 

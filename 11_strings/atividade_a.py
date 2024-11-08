@@ -15,3 +15,8 @@ if nome and nome_meio and nome_ultimo :
 else :
     print('Nome está invalido')
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cb4436e61766cc60c8ffd09958c355c29b46d8b7

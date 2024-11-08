@@ -12,7 +12,7 @@ import os
 
 os.system('cls')
 
-print('ANO BISSEXTO')
+print(' TRIANGULO')
 print('-'*70)
 
 a = float(input('Entre com o 1º segmento: '))
