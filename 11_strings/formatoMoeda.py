@@ -33,6 +33,6 @@ print(lucro_texto)
 print(type(lucro_texto))
 print()
 
-lucro_texto = f'R${lucro:,.2f}'.replace(',', '_').replace('.', ',').replace('_', '.')
+lucro_texto = f'R${lucro:_.2f}'.replace('.', ',').replace('_', '.')
 print(lucro_texto)
 print()

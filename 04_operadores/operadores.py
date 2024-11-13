@@ -6,7 +6,8 @@ os.system('cls') # limpa a tela
 init(autoreset=True) # auto resetar a biblioteca colorama
 
 #inicio do codigo
-print(Back.CYAN + Style.BRIGHT + '                     OPERADORES ARITMÉTICOS                           ')
+titulo = 'OPERADORES ARITMÉTICOS'
+print(Back.CYAN + Style.BRIGHT + '{:^70}'.format(titulo)) # alinhamento format
 print()
 
 # Entrada de Dados
@@ -65,7 +66,7 @@ print()
 
 print(Back.RED + Style.BRIGHT +'RESULTADOS')
 print('='*70)
-print(f'A soma de {parcela_1} + {parcela_2} é...........: {soma}')
+print(f'A soma de {parcela_1} + {parcela_2} é...........: {soma:}')
 print(f'A subtração de {minuendo} - {subtraendo} é......: {diferenca}')
 print(f'A multiplicação de {multiplicando} x {multiplicador} é..: {produto}')
 print(f'A divisão de {dividendo} ÷ {divisor} é........: {quociente}')
