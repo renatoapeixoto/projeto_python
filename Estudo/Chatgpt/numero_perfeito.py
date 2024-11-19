@@ -9,6 +9,18 @@ import os
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
+tamanho = int(input('Digite o final do intervalo: '))
+for i in range (2,tamanho+1):
+    div = 0
+    for j in range (1,i):
+        if i % j == 0:
+            div = div + j 
+    if div == i:
+        print(div, end='|')
+
+
+
+exit()
 ###############################################################################
 ###############################################################################
 # TESTAR SOMENTE UM NUMERO PERFEITO
