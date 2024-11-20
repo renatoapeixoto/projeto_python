@@ -20,16 +20,11 @@
 from os import system
 system('cls')
 
-
-# Entrada
-
-
 # Declaração
 maior_idade = 0
 total_feminina = 0.0
 habitantes = 0
 porc_Fem = 0.00
-
 while True:
     print('-' * 80)
     idade = int(input('Digite a idade: '))
@@ -39,21 +34,15 @@ while True:
         sexo = input('Digite o sexo, (M) ou (F): ')
         olhos = input('Digite cor dos olhos, (azuis, verdes, castanhos): ')
         cabelos = input('Digite a cor dos cabelos, (louros, castanhos, pretos): ')
-        
         if idade > maior_idade :
             maior_idade = idade
-        
         if (sexo == 'F') and (idade >= 18 and idade <= 35) and (olhos == 'verdes') and (cabelos == 'louros'):
             total_feminina = total_feminina + 1
-        
         habitantes = habitantes + 1
-
     if idade > 0 :
         porc_Fem = (total_feminina / habitantes) * 100
-
 print(f'A maior idade é: {maior_idade}')
 print(f'Porcentagem de Habitantes Feminino com idade entre 18 e 35, olhos verdes'
       f' e cabelos louros são: {porc_Fem}')
 print(f'Quantidade de Habitantes: {habitantes}')
 print('-' * 80)
-
