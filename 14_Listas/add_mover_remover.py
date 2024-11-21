@@ -25,7 +25,7 @@ print(produtos)
 print(f'Movida para dentro de uma variavél: {aux}')
 print()
 
-# remover da lista - metodo .pop() 
+# remover da lista - metodo .remove() 
 produto = input('Remover um produto na lista: ').lower()
 produtos.remove(produto)
 print(produtos)
