@@ -1,3 +1,9 @@
+################################################################################
+# ATENÇÃO !!! Se voce atribuir uma lista a uma variavel, elas estaram vinculadas. 
+# Para você alterar lista separadamente terá que fazer uma cópia usaando 
+# o comando copy(). Ex: variavel = lista.copy()
+################################################################################
+
 import os
 
 # Limpa a tela do terminal/console
@@ -28,10 +34,11 @@ else:
 print(f"Lista fornecida: {numeros}")
 print()
 
-#######################################
-# OBS: se voce atribuir uma lista a outra, elas estaram vinculadas. Para você 
-# alterar uma copia de lista separadamente terá que usar o comando copy.
-
+################################################################################
+# OBS: Se voce atribuir uma lista a uma variavel, elas estaram vinculadas. 
+# Para você alterar uma copia de lista separadamente terá que usar o comando 
+# copy.
+################################################################################
 lista_teste = numeros  
 lista_teste.remove(1)
 numeros.remove(2)
