@@ -34,7 +34,7 @@ escolha= ['1', '2', '3', '4', '5', '6', '7']
 montar_tela(lista01, lista02)
 while True:  # Escolha opção
     print('-' * 80)
-    opcao = input('Digite uma das "opções", ou "menu", ou "sair" para encerrar o programa: ').lower().strip()
+    opcao = input('Digite o numero das "opções", ou "menu", ou "sair" para encerrar o programa: ').lower().strip()
     if opcao == 'sair':
         exit()
     elif opcao == 'menu':
@@ -63,7 +63,7 @@ while True:  # Escolha opção
                     op = input('Deseja adicionar na Lista01 ou na Lista02 ?\n' 
                             'Digite "1", ou "2", ou "voltar", ou "sair": ').lower().strip()
                     # vslidsção
-                    if item == 'sair':
+                    if op == 'sair':
                         exit()
                     elif op == 'voltar':
                         print('-' * 80)
@@ -81,7 +81,6 @@ while True:  # Escolha opção
                             print('-' * 80)
                             print(f'Lista01: {lista01}')
                             print(f'Lista02: {lista02}')
-                            print('-' * 80)
                             break
                         else:
                             print('Erro não esperado !!!!')
@@ -89,61 +88,75 @@ while True:  # Escolha opção
                         print('-' * 80)
                     else:
                         print('Opção inválida !!!')
-                                           
-            
-            
         
-   
-
-        
-        
-#         elif opcao == '2':
-#             op = input('Escolha a lista, Digite "1" p/ Lista01, ou "2" para Lista02: ')
-#             if op == '1' and op == '2':
-#                 lista_escolhida = escolher_lista(op)
-#             else:
-#                 print('Opção inválida')
-#                 opcao = ""
-            
-#             alterar_item = input('Digite o item que deseja alterar: ').lower().strip()
-#             if alterar_item in lista_escolhida:
-#                 pass
-#             else:
-#                 print('Item não está na lista')
-#                 opcao = ""
-            
-#             tamanho = len(escolher_lista(op))
-#             lista_escolhida = escolher_lista(op)
-           
-#             if op == '1' and op == '2':
-                             
-
-#                 if alterar_item in lista_escolhida:
-#                     i = lista.index(alterar_item)
-#                     novo_item = input('Digite a aleração: ').lower().strip()
-#                     lista[i] = novo_item
-#                     print('-' * 80)
-#                 else:
-#                     print('Item não cadastrado !!!!')
-
-
-
-
-#             else:
-#                 print('Opção inválida')
-            
-            
-            
-           
-#         elif opcao == '3':
-#             item = input('Digite o item para consultar: ').lower().strip()
-#             if item in lista:
-#                 i = lista.index(item)
-#                 print(f'O item {item} encontra-se na posição {i} na lista01')
-#                 print('-' * 80)
-#             else:
-#                 print('Item não cadastrado !!!!')
-#                 print('-' * 80)
+        elif opcao == '2':
+            while True: # loop opção 1 
+                print('-' * 80)
+                op = input('Digite "1" p/ alterar Lista01, ou "2" p/ alterar Lista02, ou "voltar": ')
+                if op == 'sair':
+                        exit()
+                # validação do item
+                elif not op:
+                    print('opção inválida !!!')
+                    continue
+                elif op == 'voltar':
+                    break
+                elif op != '1' and op != '2':
+                    print('Opção inválida')
+                else:
+                    lista_escolhida = escolher_lista(op)
+                    print(lista_escolhida)
+                    while True:
+                        alterar_item = input('Digite o item da lista para alterar, ou "voltar": ').lower().strip()
+                        if not alterar_item:
+                            print('opção inválida !!!')
+                            continue                       
+                        elif alterar_item == 'voltar':
+                            break
+                        elif not alterar_item in lista_escolhida:
+                            print('item não encontrado, tente novamente !')
+                            continue
+                        else:
+                            i = lista_escolhida.index(alterar_item)
+                            aux_lista = lista_escolhida[1]
+                            novo_item = input('Digite a aleração: ').lower().strip()
+                            lista_escolhida[i] = novo_item
+                            if lista_escolhida[i] != aux_lista:
+                                print('Adicionado com sucesso !!!!')
+                                print('-' * 80)
+                                print(f'Lista01: {lista01}')
+                                print(f'Lista02: {lista02}')
+                                break
+        elif opcao == '3':
+            while True: # loop opção 1 
+                print('-' * 80)
+                op = input('Digite "1" p/ consultar Lista01, ou "2" p/ consultar Lista02, ou "voltar", ou "sair": ')
+                if op == 'sair':
+                        exit()
+                # validação do item
+                elif not op:
+                    print('opção inválida !!!')
+                    continue
+                elif op == 'voltar':
+                    break
+                elif op != '1' and op != '2':
+                    print('Opção inválida')
+                else:
+                    lista_escolhida = escolher_lista(op)
+                    print(lista_escolhida)
+                    while True:
+                        item = input('Digite o item da lista para consultar sua posição, ou "voltar" : ').lower().strip()
+                        if item == 'voltar':
+                            break
+                        elif not item:
+                            continue
+                        elif item in lista_escolhida:
+                            i = lista_escolhida.index(item)
+                            print(f'O item {item} encontra-se na posição {i} da lista{op}: {lista_escolhida}')
+                            break
+                        else:
+                            print('Item não encontrado !!!')
+                            continue
 #         elif opcao == '4':
 #             item = input('Digite o item para remover: ').lower().strip()
 #             tamanho = len(lista)
