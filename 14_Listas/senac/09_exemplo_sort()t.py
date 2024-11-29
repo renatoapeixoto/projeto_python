@@ -1,3 +1,8 @@
+# Como funciona?: Ele altera a própria lista original para organizá-la em ordem
+# crescente (por padrão) ou de acordo com uma chave especificada.
+
+
+
 import os
 
 # Limpa a tela do terminal/console
