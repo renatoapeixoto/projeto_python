@@ -19,7 +19,7 @@ print()
 
 ################################################################################
 print('=' * 80)
-print ('APLICAÇÃO NAS OPERAÇÕES EM CONJUNTOS DA ESTRUTURA DE DADOS set{}')
+print('APLICAÇÃO NAS OPERAÇÕES EM CONJUNTOS DA ESTRUTURA DE DADOS set{}')
 print('-' * 80)
 # Definição de dois conjuntos
 conjunto_A = {1, 2, 3, 4, 5}
@@ -97,14 +97,6 @@ print('-' * 43)
 # Resultados
 print(f"Busca na lista...: encontrado = {resultado_lista}, tempo = {tempo_lista:.6f} segundos")
 print(f"Busca no conjunto: encontrado = {resultado_conjunto}, tempo = {tempo_conjunto:.6f} segundos")
-# Comparação
-if tempo_conjunto < tempo_lista:
-    fator = tempo_lista / tempo_conjunto
-    print(f'A busca no conjunto foi mais rápida {fator:.2f} vezes do que a lista')
-else:
-    fator = tempo_conjunto / tempo_lista
-    print(f'A busca na lista foi mais rápida {fator} vezes (o que é incomum para'
-           ' grandes coleções).')
 print('=' * 80)
 print()
 
@@ -116,47 +108,55 @@ print('-' * 80)
 seguidores_usuario_A = {"Alice", "Bob", "Charlie", "David"}
 seguidores_usuario_B = {"Charlie", "David", "Edward", "Fiona"}
 # Exibindo os dados iniciais
-print("Seguidores do usuário A...................:", seguidores_usuario_A)
-print("Seguidores do usuário B...................:", seguidores_usuario_B)
+print(f'Seguidores do usuário A...................: {seguidores_usuario_A}')
+print(f'Seguidores do usuário B...................: {seguidores_usuario_B}')
 # Amigos em comum (interseção)
 amigos_comuns = seguidores_usuario_A & seguidores_usuario_B
-print("Amigos em comum (A ∩ B)...................:", amigos_comuns)
+print(f'Amigos em comum (A ∩ B)...................: {amigos_comuns}')
 # Seguidores exclusivos de A (diferença)
 seguidores_exclusivos_A = seguidores_usuario_A - seguidores_usuario_B
-print("Seguidores exclusivos do usuário A (A - B):", seguidores_exclusivos_A)
+print(f'Seguidores exclusivos do usuário A (A - B): {seguidores_exclusivos_A}')
 # Seguidores exclusivos de B (diferença)
 seguidores_exclusivos_B = seguidores_usuario_B - seguidores_usuario_A
-print("Seguidores exclusivos do usuário B (B - A):", seguidores_exclusivos_B)
+print(f'Seguidores exclusivos do usuário B (B - A): {seguidores_exclusivos_B}')
 # Seguidores não compartilhados (diferença simétrica)
 seguidores_nao_compartilhados = seguidores_usuario_A ^ seguidores_usuario_B
-print("Seguidores não compartilhados (A ^ B).....:", seguidores_nao_compartilhados)
+print(f'Seguidores não compartilhados (A ^ B).....: {seguidores_nao_compartilhados}')
 # Todos os seguidores únicos (união)
 todos_seguidores = seguidores_usuario_A | seguidores_usuario_B
-print("Todos os seguidores únicos (A ∪ B)........:", todos_seguidores)
+print(f'Todos os seguidores únicos (A ∪ B)........: {todos_seguidores}')
 print()
 
-
-
+################################################################################
 print('=' * 80)
+print('APLICAÇÃO EM FILTRAGEM DE DADOS COM A ESTRUTURA DE DADOS set{}')
+print('-' * 80)
 # Listas de dados
-dados_totais = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace"]
-usuarios_bloqueados = {"Charlie", "David"}  # Conjunto de exclusão
-usuarios_prioritarios = {"Alice", "Eve"}   # Conjunto de inclusão prioritária
+dados_totais = ["Renato", "Alice", "Clara", "Ronald", "David", "Kayky", "Guilherme", "Jessica", "Bruno", "Gabriel"]
+usuarios_bloqueados = {"Kayky", "David"}  # Conjunto de exclusão
+usuarios_prioritarios = {"Renato", "Ronald"}   # Conjunto de inclusão prioritária
+print(f'Dados totais.......................................: {dados_totais}')
+print(f'Usuarios_bloqueados................................: {usuarios_bloqueados}')
+print(f'Usuarios_prioritários..............................: {usuarios_prioritarios}')
+print('-' * 80)
 
 # Transformando os dados totais em um conjunto
 dados_set = set(dados_totais)
 
 # Filtrando dados - removendo usuários bloqueados
 dados_filtrados = dados_set - usuarios_bloqueados
-print("Dados após exclusão dos bloqueados:", dados_filtrados)
+print(f'Dados após exclusão dos bloqueados.................: {dados_filtrados}')
 
 # Adicionando usuários prioritários (mesmo que não estivessem nos dados totais)
 dados_com_prioritarios = dados_filtrados | usuarios_prioritarios
-print("Dados com inclusão prioritária:", dados_com_prioritarios)
+print(f'Dados com inclusão prioritária.....................: {dados_com_prioritarios}')
 
 # Verificando se há usuários duplicados
-print("Conjunto final (sem duplicados, automaticamente):", dados_com_prioritarios)
+print(f'Conjunto final (sem duplicados, automaticamente)...: {dados_com_prioritarios}')
 
 # Filtrando com base em uma condição adicional (por exemplo, nomes com mais de 4 caracteres)
 dados_condicionais = {usuario for usuario in dados_com_prioritarios if len(usuario) > 4}
-print("Dados filtrados por nomes com mais de 4 caracteres:", dados_condicionais)
+print(f'Dados filtrados por nomes com mais de 4 caracteres.: {dados_condicionais}')
+
+print('=' * 80)
+print()
