@@ -132,7 +132,7 @@ print('=' * 80)
 print('APLICAÇÃO EM FILTRAGEM DE DADOS COM A ESTRUTURA DE DADOS set{}')
 print('-' * 80)
 # Listas de dados
-dados_totais = ["Renato", "Alice", "Clara", "Ronald", "David", "Kayky", "Guilherme", "Jessica", "Bruno", "Gabriel"]
+dados_totais = ["Renato", "Ronald", "David", "Kayky", "Guilherme", "Bruno"]
 usuarios_bloqueados = {"Kayky", "David"}  # Conjunto de exclusão
 usuarios_prioritarios = {"Renato", "Ronald"}   # Conjunto de inclusão prioritária
 print(f'Dados totais.......................................: {dados_totais}')
