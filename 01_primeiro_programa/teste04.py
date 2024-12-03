@@ -16,20 +16,32 @@ os.system('cls')
 #         break
 #     else:
 #         input('Nota invalida, digite novamente: ')
-listas = [4, 5, 6]
-sets = {1, 2, 3}
-tuplas = (7, 8, 9)
-a = set(tuplas)
-b = set(listas)
-c = list(sets)
-d = list(tuplas)
-e = tuple(listas)
-f = tuple(sets)
-print(a)
-print(b)
-print(c)
-print(d)
-print(e)
-print(f)
- 
+# listas = [4, 5, 6]
+# sets = {1, 2, 3}
+# tuplas = (7, 8, 9)
+# a = set(tuplas)
+# b = set(listas)
+# c = list(sets)
+# d = list(tuplas)
+# e = tuple(listas)
+# f = tuple(sets)
+# print(a)
+# print(b)
+# print(c)
+# print(d)
+# print(e)
+# print(f)
 
+a = {1, 2, 3}
+b = {4, 5, 6}
+c = a.union(b)
+novo_d = a.copy()
+print(c)
+a.remove(1)
+print(a)
+print(novo_d)
+ 
+while nome in range([1, 2, 3,4]):
+while nome in range([1, 2, 3,4]):
+ 
+    
