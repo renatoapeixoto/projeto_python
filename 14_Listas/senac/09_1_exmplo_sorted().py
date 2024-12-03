@@ -8,6 +8,7 @@ import os
 os.system('cls')
 
 lista = [3, 1, 4, 1, 5, 9]
+# OBS: DIFERENÇA: sort() altera a lista original, sorted() retorna uma nova lista.
 nova_lista = sorted(lista)
 print(lista)       # Saída: [3, 1, 4, 1, 5, 9] (original permanece igual)
 print(nova_lista)  # Saída: [1, 1, 3, 4, 5, 9]

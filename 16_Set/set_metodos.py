@@ -1,24 +1,39 @@
-# OBS : Notei que numeros no set é impresso na ordem. 
-
 import os
 
-# add(elemento): Adiciona um elemento ao set.
+
 os.system('cls')
 
-# Criação de 2 Set´s.
+# Criação de 4 Set´s.
 set_1 = {'3', '4'}
-set_2 = {'3', '4', '5', '6'}
-set_3 = {1, 2, 3}
-set_4 = {4, 5, 6}
+set_2 = {'3', '4', '5', '6'} 
+set_3 = {1, 3, 5, 7} 
+set_4 = {2, 4, 6, 8}
+
+# função mostrar_sets
+def mostrar_sets():
+    print(F'set_1: {set_1} - <str>')
+    print(F'set_2: {set_2} - <str>')
+    print(F'set_3: {set_3} - <int>')
+    print(F'set_4: {set_4} - <int>')
+
+# função mostrar_set_1 e set_2 
+def mostrar_sets_1_2():
+    print(F'set_1: {set_1} - <str>')
+    print(F'set_2: {set_2} - <str>')
+
+# função mostrar_set_3 e set_4 
+def mostrar_sets_3_4():
+    print(F'set_3: {set_3} - <int>')
+    print(F'set_4: {set_4} - <int>')
 
 # Função para mostrar a tela principal do programa
 def tela ():
     os.system("cls")
-    print('*** METODOS SETs ***')
+    print('***  SETs JÁ CRIADOS  ***')
     print('-' * 80)
-    print(f'Set_1: {set_1} Set_2: {set_2} Set_3: {set_3} Set_4: {set_4}')
+    mostrar_sets()
     print('-' * 80)
-    print('*** MENU PRINCIPAL ***')
+    print('***  MENU PRINCIPAL / METODOS SETs  ***')
     print('Escolha "1" para Metodo  .add(elemento)')
     print('Escolha "2" para Metodo  .remove(elemento)')
     print('Escolha "3" para Metodo  .discard(elemento) ')
@@ -31,24 +46,6 @@ def tela ():
     print('Escolha "10" para Metodo .issuperset() ')
     print('Escolha "11" para Metodo .isdisjoint() ')
     print('-' * 80)
-
-# função mostrar_sets
-def mostrar_sets():
-    print(F'set_1: {set_1}')
-    print(F'set_2: {set_2}')
-    print(F'set_3: {set_3}')
-    print(F'set_4: {set_4}')
-
-# função mostrar_set_1 e set_2 
-def mostrar_sets_1_2():
-    print(F'set_1: {set_1}')
-    print(F'set_2: {set_2}')
-
-# função mostrar_set_3 e set_4 
-def mostrar_sets_3_4():
-    print(F'set_3: {set_3}')
-    print(F'set_4: {set_4}')
-
 
 tela() # função mostrar a tela principal do programa
 while True:
@@ -70,14 +67,17 @@ while True:
     
     elif escolha == '1':
         # add(elemento): Adiciona um elemento ao set escolhido.
-        print('-' * 80)
         mostrar_sets()
-        elemento = input('Digite um elemento: ').strip().lower()
+        print('-' * 80)
+        
+        elemento = input('Digite um elemento para adicionar: ').strip().lower()
         while elemento == '':
-            elemento = input('Digite um elemento: ').strip().lower()
-        escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets: ').lower().strip()
-        while escolhe_set == '':
-            escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets: ').lower().strip()
+            elemento = input('Digite um elemento para adicionar: ').strip().lower()
+        
+        escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets será adicionado ').lower().strip()
+        while escolhe_set == '' or escolhe_set not in ['1', '2', '3', '4']:
+            escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets será adicionado ').lower().strip()
+        
         if escolhe_set == '1':
             set_1.add(elemento)
         elif escolhe_set == '2':
@@ -86,23 +86,25 @@ while True:
             set_3.add(int(elemento))
         elif escolhe_set == '4':
             set_4.add(int(elemento))
-        else:
-            print('opção inválida')
+       
         mostrar_sets()
-        print('OBS: set_1.add(elemento) : Adiciona um elemento ao set.')
+        print('OBS: set_1.add(elemento) : Adiciona um elemento ao set. Não repete elemento.')
         print('-' * 80)
     
     elif escolha == '2':
         # remove(elemento): Remove um elemento do set. Lança um erro se o elemento 
         # não estiver presente.
-        print('-' * 80)
         mostrar_sets()
-        elemento = input('Digite um elemento: ').strip().lower()
+        print('-' * 80)
+        
+        elemento = input('Digite um elemento para remover: ').strip().lower()
         while elemento == '':
-            elemento = input('Digite um elemento: ').strip().lower()
+            elemento = input('Digite um elemento para remover: ').strip().lower()
+        
         escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets: ').lower().strip()
-        while escolhe_set == '':
+        while escolhe_set == '' or escolhe_set not in ['1', '2', '3', '4']:
             escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets: ').lower().strip()
+        
         if escolhe_set == '1':
             set_1.remove(elemento)
         elif escolhe_set == '2':
@@ -111,8 +113,7 @@ while True:
             set_3.remove(int(elemento))
         elif escolhe_set == '4':
             set_4.remove(int(elemento))
-        else:
-            print('opção inválida')
+        
         mostrar_sets()    
         print('OBS: set_1.remove(elemento) : Remove um elemento do set. Lança um erro\n' 
               'se o elemento não estiver presente.')
@@ -121,14 +122,17 @@ while True:
     elif escolha == '3':
         # discard(elemento): Remove um elemento do set se ele estiver presente. 
         # Não faz nada se o elemento não estiver presente.
-        print('-' * 80)
         mostrar_sets()
-        elemento = input('Digite um elemento: ').strip().lower()
+        print('-' * 80)
+        
+        elemento = input('Digite um elemento para discartar: ').strip().lower()
         while elemento == '':
-            elemento = input('Digite um elemento: ').strip().lower()
+            elemento = input('Digite um elemento para discartar: ').strip().lower()
+        
         escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets: ').lower().strip()
-        while escolhe_set == '':
+        while escolhe_set == '' or escolhe_set not in ['1', '2', '3', '4']:
             escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets: ').lower().strip()
+        
         if escolhe_set == '1':
             set_1.discard(elemento)
         elif escolhe_set == '2':
@@ -137,8 +141,7 @@ while True:
             set_3.discard(int(elemento))
         elif escolhe_set == '4':
             set_4.discard(int(elemento))
-        else:
-            print('opção inválida')
+        
         mostrar_sets()   
         print('OBS: set_1.discard(elemento) : Remove um elemento do set se ele estiver presente,\n' 
               'caso contrário, não faz nada se o elemento não estiver presente.')
@@ -146,9 +149,13 @@ while True:
     
     elif escolha == '4':
         # clear(): Remove todos os elementos do set.
-        print('-' * 80)
         mostrar_sets()
+        print('-' * 80)
+        
         escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets: ').lower().strip()
+        while escolhe_set == '' or escolhe_set not in ['1', '2', '3', '4']:
+            escolhe_set = input('Digite "1", "2", "3", "4" para escolher qual Sets: ').lower().strip()
+        
         if escolhe_set == '1':
             set_1.clear()
         elif escolhe_set == '2':
@@ -157,8 +164,7 @@ while True:
             set_3.clear()
         elif escolhe_set == '4':
             set_4.clear()        
-        else:   
-            print('opção inválida')
+        
         mostrar_sets()
         print('OBS: set_1.clear() : Limpa todos os elementos de um Set.')
         print('-' * 80)
@@ -172,7 +178,8 @@ while True:
         print('Resultado: set_uniao = set_1.union(set_2):', set_uniao)
         print(F'set_3: {set_3}')
         print(F'set_4: {set_4}')
-        set_uniao = set_3.union(set_4)
+        set_uniao = set_3.union(set_4)  
+        # set_uniao = set_3 | set_4
         print('Resultado: set_uniao = set_3.union(set_4):', set_uniao)
         print('OBS: Retorna um novo set que é a união de dois sets. Observação, não repete elemento.')
         print('-' * 80)
@@ -183,12 +190,13 @@ while True:
         print(F'set_1: {set_1}')
         print(F'set_2: {set_2}')
         set_interseção = set_1.intersection(set_2)
-        print('Resultado: set_interseção = set_1.intersection(set_2)', set_interseção)
+        # set_interseção = set_1 & set_2
+        print('Resultado: set_interseção = set_1.intersection(set_2): ', set_interseção)
         print(F'set_3: {set_3}')
         print(F'set_4: {set_4}')
         set_interseção = set_3.intersection(set_4)
-        print('Resultado: set_interseção = set_3.intersection(set_4)', set_interseção)
-        print('OBS: Retorna um novo set que é a interseção de dois sets.')
+        print('Resultado: set_interseção = set_3.intersection(set_4): ', set_interseção)
+        print('OBS: Retorna um novo set com elementos que estão em ambos os sets.')
         print('-' * 80)
     
     elif escolha == '7':
@@ -197,6 +205,7 @@ while True:
         print('-' * 80)
         mostrar_sets_1_2()
         set_diferença = set_1.difference(set_2)
+        # set_diferença = set_1 - set_2
         print('Resultado: set_diferença = set_1.difference(set_2): ', set_diferença)
         mostrar_sets_3_4()
         set_diferença = set_3.difference(set_4)
@@ -210,6 +219,7 @@ while True:
         print('-' * 80)
         mostrar_sets_1_2()
         set_diferenca_simetrica = set_1.symmetric_difference(set_2)
+        # set_diferenca_simetrica = set_1 ^ set_2
         print('Resultado: set_diferenca_simetrica = set_1.symmetric_difference(set_2):', set_diferenca_simetrica)
         mostrar_sets_3_4()
         set_diferenca_simetrica = set_3.symmetric_difference(set_4)

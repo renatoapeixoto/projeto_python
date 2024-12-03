@@ -1,5 +1,6 @@
 ################################################################################
-# ATENÇÃO !!! Se voce atribuir uma lista a uma variavel, elas estaram vinculadas. 
+# ATENÇÃO !!! Se voce atribuir uma lista a uma variavel, elas estaram vinculadas, 
+# ou seja, se remover um elemento em uma da lista remove nas 2 listas.
 # Para você alterar lista separadamente terá que fazer uma cópia usaando 
 # o comando copy(). Ex: variavel = lista.copy()
 ################################################################################

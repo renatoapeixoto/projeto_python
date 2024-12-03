@@ -15,7 +15,7 @@ numero_elementos = int(input("Quantos elementos a tupla vai possuir? "))
 # Estrutura de repetição para obter os elementos do usuário
 for i in range(numero_elementos):
     while True:
-        valor = input(f"Digite o valor {i + 1}: ")
+        valor = input(f"Digite o valor {i + 1}: ").lower().strip()
         if valor.isdigit():  # Verifica se a entrada é um número
             elementos.append(int(valor))
             break

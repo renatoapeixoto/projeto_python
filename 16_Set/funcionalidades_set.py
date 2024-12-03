@@ -70,7 +70,7 @@ print('-' * 80)
 # Gerando um grande conjunto de números
 grande_lista = list(range(1, 10**6))  # Lista com 1 milhão de elementos
 grande_conjunto = set(grande_lista)   # Transformando a lista em um conjunto
-print('Criamos um lista com 1.000.000 números e vamos procurar o número 999999')
+print('Criamos um lista com 1 milhão de números e vamos procurar o número 999999')
 # Elemento a ser buscado
 elemento = 999999
 # Busca na lista
@@ -82,7 +82,7 @@ resultado_lista = elemento in grande_lista # verifica de o numero está dentro d
 fim_lista = time.time() # marca o tempo atual
 print(f'Fim da busca.......: {fim_lista}')
 tempo_lista = fim_lista - inicio_lista
-print(f'Tempo da busca.....: {tempo_lista}')
+print(f'Tempo da busca.....: {tempo_lista} segundos')
 print('-' * 43)
 # Busca no conjunto, set{}
 print('BUSCA NA ESTRUTURA set{}')
@@ -92,7 +92,7 @@ resultado_conjunto = elemento in grande_conjunto
 fim_conjunto = time.time()
 print(f'Fim da busca.......: {fim_conjunto}')
 tempo_conjunto = fim_conjunto - inicio_conjunto
-print(f'Tempo da busca.....: {tempo_conjunto}')
+print(f'Tempo da busca.....: {tempo_conjunto} segundos')
 print('-' * 43)
 # Resultados
 print(f"Busca na lista...: encontrado = {resultado_lista}, tempo = {tempo_lista:.6f} segundos")
@@ -132,7 +132,7 @@ print('=' * 80)
 print('APLICAÇÃO EM FILTRAGEM DE DADOS COM A ESTRUTURA DE DADOS set{}')
 print('-' * 80)
 # Listas de dados
-dados_totais = ["Renato", "Ronald", "David", "Kayky", "Guilherme", "Bruno"]
+dados_totais = ["David", "Kayky", "Guilherme", "Bruno"]
 usuarios_bloqueados = {"Kayky", "David"}  # Conjunto de exclusão
 usuarios_prioritarios = {"Renato", "Ronald"}   # Conjunto de inclusão prioritária
 print(f'Dados totais.......................................: {dados_totais}')
@@ -152,6 +152,7 @@ dados_com_prioritarios = dados_filtrados | usuarios_prioritarios
 print(f'Dados com inclusão prioritária.....................: {dados_com_prioritarios}')
 
 # Verificando se há usuários duplicados
+dados_com_prioritarios = set(dados_com_prioritarios)
 print(f'Conjunto final (sem duplicados, automaticamente)...: {dados_com_prioritarios}')
 
 # Filtrando com base em uma condição adicional (por exemplo, nomes com mais de 4 caracteres)
