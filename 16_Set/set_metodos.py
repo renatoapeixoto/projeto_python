@@ -178,9 +178,9 @@ while True:
         print('Resultado: set_uniao = set_1.union(set_2):', set_uniao)
         print(F'set_3: {set_3}')
         print(F'set_4: {set_4}')
-        set_uniao = set_3.union(set_4)  
-        # set_uniao = set_3 | set_4
-        print('Resultado: set_uniao = set_3.union(set_4):', set_uniao)
+        # set_uniao02 = set_3.union(set_4)  
+        set_uniao02 = set_3 | set_4
+        print('Resultado: set_uniao = set_3.union(set_4):', set_uniao02)
         print('OBS: Retorna um novo set que é a união de dois sets. Observação, não repete elemento.')
         print('-' * 80)
     
@@ -194,8 +194,8 @@ while True:
         print('Resultado: set_interseção = set_1.intersection(set_2): ', set_interseção)
         print(F'set_3: {set_3}')
         print(F'set_4: {set_4}')
-        set_interseção = set_3.intersection(set_4)
-        print('Resultado: set_interseção = set_3.intersection(set_4): ', set_interseção)
+        set_interseção02 = set_3.intersection(set_4)
+        print('Resultado: set_interseção = set_3.intersection(set_4): ', set_interseção02)
         print('OBS: Retorna um novo set com elementos que estão em ambos os sets.')
         print('-' * 80)
     
@@ -208,8 +208,8 @@ while True:
         # set_diferença = set_1 - set_2
         print('Resultado: set_diferença = set_1.difference(set_2): ', set_diferença)
         mostrar_sets_3_4()
-        set_diferença = set_3.difference(set_4)
-        print('Resultado: set_diferença = set_3.difference(set_4): ', set_diferença)
+        set_diferença02 = set_3.difference(set_4)
+        print('Resultado: set_diferença = set_3.difference(set_4): ', set_diferença02)
         print('OBS: Retorna um novo set com os elementos do Set_1 que não estão no Set_2.')
         print('-' * 80)
     
@@ -222,8 +222,8 @@ while True:
         # set_diferenca_simetrica = set_1 ^ set_2
         print('Resultado: set_diferenca_simetrica = set_1.symmetric_difference(set_2):', set_diferenca_simetrica)
         mostrar_sets_3_4()
-        set_diferenca_simetrica = set_3.symmetric_difference(set_4)
-        print('Resultado: set_diferenca_simetrica = set_3.symmetric_difference(set_4):', set_diferenca_simetrica)
+        set_diferenca_simetrica02 = set_3.symmetric_difference(set_4)
+        print('Resultado: set_diferenca_simetrica = set_3.symmetric_difference(set_4):', set_diferenca_simetrica02)
         print('OBS: Set_diferenca_simetrica: Retorna um novo set com elementos que estão em um\n'
               'dos sets, mas não em ambos.')
         print('-' * 80)
@@ -235,8 +235,8 @@ while True:
         set_subconjunto = set_1.issubset(set_2)
         print('Resultado: set_subconjunto = set_1.issubset(set_2):', set_subconjunto)
         mostrar_sets_3_4()
-        set_subconjunto = set_3.issubset(set_4)
-        print('Resultado: set_subconjunto = set_3.issubset(set_4):', set_subconjunto)
+        set_subconjunto02 = set_3.issubset(set_4)
+        print('Resultado: set_subconjunto = set_3.issubset(set_4):', set_subconjunto02)
         print('OBS: Verifica se o set_1 é um subconjunto(está contido) em set_2.')    
         print('-' * 80)
     
@@ -247,8 +247,8 @@ while True:
         set_superconjunto = set_2.issuperset(set_1)
         print('Resultdo: set_superconjunto = set_2.issuperset(set_1):', set_superconjunto)
         mostrar_sets_3_4()
-        set_superconjunto = set_4.issuperset(set_3)
-        print('Resultado: set_superconjunto = set_4.issuperset(set_3):', set_superconjunto)
+        set_superconjunto02 = set_4.issuperset(set_3)
+        print('Resultado: set_superconjunto = set_4.issuperset(set_3):', set_superconjunto02)
         print('OBS: Verifica se o set_2 é um superconjunto(contém) set_1. ')    
         print('-' * 80)
     
@@ -259,7 +259,7 @@ while True:
         set_disjuncao = set_1.isdisjoint(set_2)
         print('Resultado: set_disjuncao = set_1.isdisjoint(set_2):', set_disjuncao)
         mostrar_sets_3_4()
-        set_disjuncao = set_3.isdisjoint(set_4)
-        print('Resultado: set_disjuncao = set_3.isdisjoint(set_4):', set_disjuncao)
+        set_disjuncao02 = set_3.isdisjoint(set_4)
+        print('Resultado: set_disjuncao = set_3.isdisjoint(set_4):', set_disjuncao02)
         print('OBS: Disjunção verifica se não há elemento em comum em ambos os set')    
         print('-' * 80)
