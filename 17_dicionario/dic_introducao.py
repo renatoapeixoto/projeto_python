@@ -12,6 +12,14 @@ cores = {}
 elementos = dict()
 numeros = dict()
 
+
+
+
+
+
+
+
+
 # Atribuindo valores
 compras['id'] = 1
 compras['item'] = 'Caderno'
@@ -42,5 +50,6 @@ print(f'Detetives: {pessoas}')
 print(f'Cor RGB: {cores}')
 print(f'Tabela periódica: {elementos}')
 print(f'Listagem de números: {numeros}')
+
 print()
 print('-' * 100)
