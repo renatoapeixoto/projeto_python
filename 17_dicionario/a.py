@@ -7,7 +7,7 @@ os.system('cls')
 while True:
 
     print('-' * 70)
-    print("\nMenu de opções:")
+    print("Menu de opções:")
     print("1. Criar dicionário com fromkeys()")
     print("2. Buscar valor de uma chave com get()")
     print("3. Sair")
