@@ -1,0 +1,17 @@
+chaves = ['nome', 'idade', 'nota']
+dicionario = dict.fromkeys(chaves, "indefinido")
+print(dicionario)
+
+chaves = ['nome', 'idade', 'nota']
+dicionario = dict.fromkeys(chaves)
+print(dicionario)
+
+# Se você usar um valor mutável, como uma lista,
+# todas as chaves irão compartilhar a **mesma lista**.
+# Isso pode causar problemas.
+dicionario = dict.fromkeys(['a', 'b'], [])
+dicionario['a'].append(1) 
+print(dicionario) # {'a': [1], 'b': [1]}
+
+dicionario = {chave: [] for chave in ['a', 'b']}
+print(dicionario)

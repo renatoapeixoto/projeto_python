@@ -7,52 +7,60 @@ import os
 os.system('cls')
 
 print('-'*80)
-print('Incluir pelo menos com 4 elementos no dicionario')
+print('Digite pelo menos com 4 elementos para incluir no dicionario')
+print('Digite chave e valor ou "S" para sair')
+
 print('-'*80)
 
 dicionario = dict()
-dicionario02 = []
+dicionario_ordenado01 = dict()
 contador = 1
-while contador <= 4:
-    chave = input('Digite "s" para sair, ou digite chave: ').strip()
-    if chave == 's' and contador < 4:
-        print(f'Pelo menos você tem que digitar {4-contador} elemento no dicionário')
-        continue
-    elif chave == 's' and contador > 4:
-        break
-    elif chave == '':
+    
+while contador <= 4: # Para garantir que o dicionario tenha pelo menos 4 elementos
+    chave = input(f'Digite a {contador}º chave: ').strip().upper()
+    if chave == '': # Caso vazio, retornar para digitar 
         print('Você não digitou a chave, tente novamente.')
         continue
-    elif chave in dicionario:
-        print('chave repetida, tente novamente')
+    elif chave in dicionario: # Verificar se chave está dentro do dicionario
+        print('chave já existe, digite outra chave.')
         continue
-    
-    valor = input('Digite Valor: ').strip()
+    elif chave == 's':
+        exit()
+    valor = input('Digite o Valor: ').strip().upper()
     dicionario[chave] = valor
     contador += 1
-    print(f'Dicionario: {dicionario}')
+    print('-'*80)
+print(f'Dicionario...........: {dicionario}')
 
-# # Ordenando e imprimindo o dicionário
+# Ordenando e imprimindo o dicionário
+dicionario_ordenado01 = {chave:dicionario[chave] for chave in sorted(dicionario.keys())}
+print(f'Dicionário_ordenado01: {dicionario_ordenado01}')
+
+
+
+
+
+
+
+
+# dicionario_ordenado02 = {}
+# dicionario_ordenado03 = []
+## Opção 1 - Ordenando o dicionário e criando um novo
+# dicionario_ordenado01 = {chave:dicionario[chave] for chave in sorted(dicionario)}
+
+# # Opção 2 - Ordenando o dicionário e criando um novo
 # for chave in sorted(dicionario):
-#     print(f"{chave}: {dicionario[chave]}")
+#     dicionario_ordenado02[chave] = dicionario[chave]
 
+# # Opção 3 - Ordenando o dicionário e criando um novo
+# for chave in sorted(dicionario):
+#     dicionario_ordenado03.append({chave:dicionario[chave]})
 
-# Ordenando o dicionário e criando um novo
-# dicionario_ordenado = {chave:dicionario[chave] for chave in sorted(dicionario)}
+# print(f'dicionario_ordenado01: {dicionario_ordenado01}')
+# print(f'dicionario_ordenado02: {dicionario_ordenado02}')
+# print(f'dicionario_ordenado03: {dicionario_ordenado03}')
 
-
-
-for chave in sorted(dicionario):
-    aux = {chave:dicionario[chave]}
-    dicionario02.append(aux)
-    print(dicionario02)
-
-
-print(f'Dicionario: {dicionario}')
-    
-# print(f' {}')
-
-
+# print(dicionario_ordenado03[0])
 
 
 

@@ -11,11 +11,9 @@ for c in range(2):  # Considerando a entrada de 2 elementos
     print(f"Entrada de dados {c + 1}:")
     simbolo = str(input('Símbolo do elemento: '))
     nome = str(input('Nome do elemento: '))
-
     # Adiciona os dados ao dicionário
     elementos['simbolo'] = simbolo
     elementos['nome'] = nome
-
     # Usa append() com copy() para adicionar uma cópia do dicionário à lista
     periodica.append(elementos.copy())
 

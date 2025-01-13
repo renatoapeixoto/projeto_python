@@ -10,7 +10,7 @@ while contador <= 10:
     # Soma o contador
     contador += 1  # é o mesmo que contador = contador + 1
     if contador % 2 == 0:  # pulando os pares
-        continue
+        continue # volta direto para o inicio do loop, não executa a proxima linha.
     print(f'Contador = {contador}')
 else:
     print(f'Bloco do while...else: contador em {contador}!')

@@ -9,6 +9,7 @@ contador = 1
 while contador < 7:
     print("Contador é:", contador)
     contador += 1
+    
     # Se eu tirar essa condicional o else será executado
     if contador == 4:
         print(f"Contador chegou em {contador}. Break no While!")

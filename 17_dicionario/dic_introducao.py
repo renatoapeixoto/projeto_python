@@ -12,14 +12,6 @@ cores = {}
 elementos = dict()
 numeros = dict()
 
-
-
-
-
-
-
-
-
 # Atribuindo valores
 compras['id'] = 1
 compras['item'] = 'Caderno'
