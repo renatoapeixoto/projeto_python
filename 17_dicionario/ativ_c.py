@@ -13,46 +13,44 @@
 import os
 os.system('cls')
 
+
 # Criação do dicionário contendo 5 ferramentas
-ferramentas = {"Martelo":{"Descrição": "Ferramenta usada para pregar e quebrar objetos","Material": "Aço e madeira", "Utilidade": "Pregar pregos e quebrar materiais"},
-               "Chave de Fenda":{"Descrição": "Ferramenta para apertar ou soltar parafusos", "Material": "Aço e plástico", "Utilidade": "Ajustar parafusos"},
-               "Alicate":{"Descrição": "Ferramenta para segurar, cortar e dobrar", "Material": "Aço carbono", "Utilidade": "Segurar e cortar fios"},
-               "Serrote":{"Descrição": "Ferramenta de corte com dentes afiados", "Material": "Aço temperado", "Utilidade": "Cortar madeira"},
-               "Furadeira":{"Descrição": "Ferramenta elétrica para fazer furos", "Material": "Aço e plástico","Utilidade": "Perfuração de superfícies"}
-              }
+ferramentas = {
+    "Martelo": {
+        "Descrição": "Ferramenta usada para pregar e quebrar objetos",
+        "Material": "Aço e madeira",
+        "Utilidade": "Pregar pregos e quebrar materiais"
+    },
+    "Chave de Fenda": {
+        "Descrição": "Ferramenta para apertar ou soltar parafusos",
+        "Material": "Aço e plástico",
+        "Utilidade": "Ajustar parafusos"
+    },
+    "Alicate": {
+        "Descrição": "Ferramenta para segurar, cortar e dobrar",
+        "Material": "Aço carbono",
+        "Utilidade": "Segurar e cortar fios"
+    },
+    "Serrote": {
+        "Descrição": "Ferramenta de corte com dentes afiados",
+        "Material": "Aço temperado",
+        "Utilidade": "Cortar madeira"
+    },
+    "Furadeira": {
+        "Descrição": "Ferramenta elétrica para fazer furos",
+        "Material": "Aço e plástico",
+        "Utilidade": "Perfuração de superfícies"
+    }
+}
 
+# Usando .items() para ver as chaves principais e os subdicionários
+for ferramenta, detalhes in ferramentas.items():
+    print(f"Ferramenta: {ferramenta}")
+    for chave, valor in detalhes.items():
+        print(f"{chave}:{valor}")
+    print()
+exit()
 
-
-
-
-# # Criação do dicionário contendo 5 ferramentas
-# ferramentas = {
-#     "Martelo": {
-#         "Descrição": "Ferramenta usada para pregar e quebrar objetos",
-#         "Material": "Aço e madeira",
-#         "Utilidade": "Pregar pregos e quebrar materiais"
-#     },
-#     "Chave de Fenda": {
-#         "Descrição": "Ferramenta para apertar ou soltar parafusos",
-#         "Material": "Aço e plástico",
-#         "Utilidade": "Ajustar parafusos"
-#     },
-#     "Alicate": {
-#         "Descrição": "Ferramenta para segurar, cortar e dobrar",
-#         "Material": "Aço carbono",
-#         "Utilidade": "Segurar e cortar fios"
-#     },
-#     "Serrote": {
-#         "Descrição": "Ferramenta de corte com dentes afiados",
-#         "Material": "Aço temperado",
-#         "Utilidade": "Cortar madeira"
-#     },
-#     "Furadeira": {
-#         "Descrição": "Ferramenta elétrica para fazer furos",
-#         "Material": "Aço e plástico",
-#         "Utilidade": "Perfuração de superfícies"
-#     }
-# }
 
 
 
