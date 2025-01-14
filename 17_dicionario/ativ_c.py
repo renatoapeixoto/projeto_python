@@ -44,11 +44,45 @@ ferramentas = {
 }
 
 # Usando .items() para ver as chaves principais e os subdicionários
-for ferramenta, detalhes in ferramentas.items():
-    print(f"Ferramenta: {ferramenta}")
-    for chave, valor in detalhes.items():
-        print(f"{chave}:{valor}")
+def exibir_ferramenta():
+    quantidade = len(ferramentas)
+    print(f'O dicionário de ferramentas possui {quantidade} ferramentas.')
+    for ferramenta, detalhes in ferramentas.items():
+        print(f"🔧 Ferramenta: {ferramenta}")
+        for chave, valor in detalhes.items():
+            print(f"{chave}: {valor}")
+        print()
+
+def alterar_ferramenta():
+    print(f'Ferramentas Disponíveis:  {" - ".join(ferramentas.keys())}')
+    ferramenta = input('Digite a ferramenta que deseha alterar: ')
+    for chave, valor in ferramentas[ferramenta].items():
+        print(f"    {chave}: {valor}")
+    print()   
+    if ferramenta in ferramentas:
+        caracteristica = input('Digite qual característica que deseha alterar: ')
+        if caracteristica in ferramentas[ferramenta]:
+            nova_caracteristica = input('Digite a nova descrição: ')
+            ferramentas[ferramenta][caracteristica] = nova_caracteristica
+    print(f'{ferramenta} : {ferramentas[ferramenta]}')
     print()
+
+print ('MENU PRINCIPAL')
+print ('Opção 1 -  Exibir Ferramentas')
+print ('Opção 2 -  Incluir Ferramentas')
+print ('Opção 3 -  Altera Ferramentas')
+print ('Opção 4 -  Exibir Ferramentas')
+print ('Opção 5 -  Exibir Ferramentas')
+
+if escolha == '1':
+    
+exibir_ferramenta()
+alterar_ferramenta()
+
+
+
+
+
 exit()
 
 

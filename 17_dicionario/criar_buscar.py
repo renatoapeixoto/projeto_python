@@ -28,7 +28,7 @@ while True:
     elif opcao == '2':
         # Verifica se o dicionário foi criado antes de tentar acessá-lo
         if meu_dicionario:
-            print("Chaves disponíveis:", ", ".join(meu_dicionario.keys()))
+            print("Chaves disponíveis:", ", ".join(meu_dicionario.keys())) # Imagine que você tem uma lista de palavras ou chaves de um dicionário, e deseja transformá-las em uma única frase ou sequência de texto. O join() faz isso para você, usando um separador como vírgula, espaço ou qualquer outro caractere que você escolher.
             chave = input("Digite a chave que deseja buscar: ")
             valor = meu_dicionario.get(chave, "Chave não encontrada")
             print('-' * 70)
