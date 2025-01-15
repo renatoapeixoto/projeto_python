@@ -107,9 +107,8 @@ while True:
     elif escolha == '4':
         #relatorio()
         for ferramenta in ferramentas:
-            tamanho = len(ferramenta.split())
-            if tamanho > 1: # separa as palavras da chave, se tiver mais de 1 palavra. 
-                print(f'{ferramenta}', sep= (' - ')) # imprime lado a lado separado com traço.
+            if len(ferramenta.split()) > 1: # separa as palavras da chave, se tiver mais de 1 palavra. 
+                print(f'{ferramenta}') 
         print()    
     elif escolha == '5':
         exit()
