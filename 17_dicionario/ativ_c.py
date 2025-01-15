@@ -26,7 +26,7 @@ ferramentas = {
         "material": "Aço e plástico",
         "utilidade": "Ajustar parafusos"
     },
-    "alicate": {
+    "alicate de pressao": {
         "descrição": "Ferramenta para segurar, cortar e dobrar",
         "material": "Aço carbono",
         "utilidade": "Segurar e cortar fios"
@@ -48,18 +48,19 @@ def menu():
     print ('Opção 1 -  Exibir Ferramentas')
     print ('Opção 2 -  Incluir Ferramentas')
     print ('Opção 3 -  Altera Ferramentas')
-    print ('Opção 4 -  Exibir menu principal novamente')
+    print ('Opção 4 -  Relatorio')
     print ('Opção 5 -  ❌ Sair')
 
 # Usando .items() para ver as chaves principais e os subdicionários
 def exibir_ferramenta():
-    quantidade = len(ferramentas)
-    print(f'O dicionário possui {quantidade} ferramentas.')
-    for ferramenta, detalhes in ferramentas.items():
+    for ferramenta, detalhes in sorted(ferramentas.items()):
         print('-'*80)
         print(f"🔧 Ferramenta: {ferramenta}")
         for chave, valor in detalhes.items():
             print(f"{chave}: {valor}")
+    print('-'*80)
+    quantidade = len(ferramentas)
+    print(f'O dicionário possui {quantidade} ferramentas.')
     print()
 
 def alterar_ferramenta():
@@ -81,19 +82,35 @@ def alterar_ferramenta():
         print('ferramenta não encontrada')
 
 def inclusao_ferramenta():
+    ferramenta = input('Digite a Ferramenta: ')
+    if not ferramenta in ferramentas:
+        descricao = input('Digite a descrição: ')
+        material = input('Digite o material: ')
+        utilidade = input('Digite a utilidade: ')
+        ferramentas.update({ferramenta:{'descricao':descricao,'material':material,'utilidade':utilidade}})
+    else:
+        print('ferramenta já cadastrada')
+    print()
+
+#def relatorio():
     
 
-menu()
 while True:
+    menu()
     escolha = input('Digite sua escolha: ')
     if escolha == '1':
         exibir_ferramenta()
     elif escolha == '2':
-        pass
+        inclusao_ferramenta()
     elif escolha == '3':
         alterar_ferramenta()
     elif escolha == '4':
-        menu()
+        #relatorio()
+        for ferramenta in ferramentas:
+            tamanho = len(ferramenta.split())
+            if tamanho > 1: # separa as palavras da chave, se tiver mais de 1 palavra. 
+                print(f'{ferramenta}', sep= (' - ')) # imprime lado a lado separado com traço.
+        print()    
     elif escolha == '5':
         exit()
 
