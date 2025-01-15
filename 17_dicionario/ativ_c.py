@@ -16,42 +16,51 @@ os.system('cls')
 
 # Criação do dicionário contendo 5 ferramentas
 ferramentas = {
-    "Martelo": {
-        "Descrição": "Ferramenta usada para pregar e quebrar objetos",
-        "Material": "Aço e madeira",
-        "Utilidade": "Pregar pregos e quebrar materiais"
+    "martelo": {
+        "descrição": "Ferramenta usada para pregar e quebrar objetos",
+        "material": "Aço e madeira",
+        "utilidade": "Pregar pregos e quebrar materiais"
     },
-    "Chave de Fenda": {
-        "Descrição": "Ferramenta para apertar ou soltar parafusos",
-        "Material": "Aço e plástico",
-        "Utilidade": "Ajustar parafusos"
+    "chave de Fenda": {
+        "descrição": "Ferramenta para apertar ou soltar parafusos",
+        "material": "Aço e plástico",
+        "utilidade": "Ajustar parafusos"
     },
-    "Alicate": {
-        "Descrição": "Ferramenta para segurar, cortar e dobrar",
-        "Material": "Aço carbono",
-        "Utilidade": "Segurar e cortar fios"
+    "alicate": {
+        "descrição": "Ferramenta para segurar, cortar e dobrar",
+        "material": "Aço carbono",
+        "utilidade": "Segurar e cortar fios"
     },
-    "Serrote": {
-        "Descrição": "Ferramenta de corte com dentes afiados",
-        "Material": "Aço temperado",
-        "Utilidade": "Cortar madeira"
+    "serrote": {
+        "descrição": "Ferramenta de corte com dentes afiados",
+        "material": "Aço temperado",
+        "utilidade": "Cortar madeira"
     },
-    "Furadeira": {
-        "Descrição": "Ferramenta elétrica para fazer furos",
-        "Material": "Aço e plástico",
-        "Utilidade": "Perfuração de superfícies"
+    "furadeira": {
+        "descrição": "Ferramenta elétrica para fazer furos",
+        "material": "Aço e plástico",
+        "utilidade": "Perfuração de superfícies"
     }
 }
+
+def menu():
+    print ('MENU PRINCIPAL')
+    print ('Opção 1 -  Exibir Ferramentas')
+    print ('Opção 2 -  Incluir Ferramentas')
+    print ('Opção 3 -  Altera Ferramentas')
+    print ('Opção 4 -  Exibir menu principal novamente')
+    print ('Opção 5 -  ❌ Sair')
 
 # Usando .items() para ver as chaves principais e os subdicionários
 def exibir_ferramenta():
     quantidade = len(ferramentas)
-    print(f'O dicionário de ferramentas possui {quantidade} ferramentas.')
+    print(f'O dicionário possui {quantidade} ferramentas.')
     for ferramenta, detalhes in ferramentas.items():
+        print('-'*80)
         print(f"🔧 Ferramenta: {ferramenta}")
         for chave, valor in detalhes.items():
             print(f"{chave}: {valor}")
-        print()
+    print()
 
 def alterar_ferramenta():
     print(f'Ferramentas Disponíveis:  {" - ".join(ferramentas.keys())}')
@@ -64,70 +73,68 @@ def alterar_ferramenta():
         if caracteristica in ferramentas[ferramenta]:
             nova_caracteristica = input('Digite a nova descrição: ')
             ferramentas[ferramenta][caracteristica] = nova_caracteristica
-    print(f'{ferramenta} : {ferramentas[ferramenta]}')
-    print()
-
-print ('MENU PRINCIPAL')
-print ('Opção 1 -  Exibir Ferramentas')
-print ('Opção 2 -  Incluir Ferramentas')
-print ('Opção 3 -  Altera Ferramentas')
-print ('Opção 4 -  Exibir Ferramentas')
-print ('Opção 5 -  Exibir Ferramentas')
-
-if escolha == '1':
-    
-exibir_ferramenta()
-alterar_ferramenta()
-
-
-
-
-
-exit()
-
-
-
-
-
-
-# Função para exibir as ferramentas e seus detalhes
-def exibir_ferramentas():
-    print("\nFerramentas armazenadas:")
-    for nome, detalhes in ferramentas.items():
-        print(f"\n🔧 {nome}:")
-        for chave, valor in detalhes.items():
-            print(f"  {chave}: {valor}")
-
-# Função para modificar uma ferramenta
-def alterar_ferramenta():
-    nome = input("\nDigite o nome da ferramenta que deseja alterar: ")
-    if nome in ferramentas:
-        print("\nEscolha o que deseja alterar:")
-        print("1 - Descrição")
-        print("2 - Material")
-        print("3 - Utilidade")
-        escolha = input("Digite o número da sua escolha: ")
-
-        if escolha == "1":
-            nova_descricao = input("Digite a nova descrição: ")
-            ferramentas[nome]["Descrição"] = nova_descricao
-        elif escolha == "2":
-            novo_material = input("Digite o novo material: ")
-            ferramentas[nome]["Material"] = novo_material
-        elif escolha == "3":
-            nova_utilidade = input("Digite a nova utilidade: ")
-            ferramentas[nome]["Utilidade"] = nova_utilidade
+            print(f'{ferramenta} : {ferramentas[ferramenta]}')
+            print()
         else:
-            print("Escolha inválida.")
-        print(f"\n🔄 Ferramenta '{nome}' atualizada com sucesso!")
+            print('caracteristica não encontrada')
     else:
-        print("❌ Ferramenta não encontrada.")
+        print('ferramenta não encontrada')
 
-# Exibir as ferramentas inicialmente
-exibir_ferramentas()
+def inclusao_ferramenta():
+    
 
-# Modificar uma ferramenta
-alterar_ferramenta()
+menu()
+while True:
+    escolha = input('Digite sua escolha: ')
+    if escolha == '1':
+        exibir_ferramenta()
+    elif escolha == '2':
+        pass
+    elif escolha == '3':
+        alterar_ferramenta()
+    elif escolha == '4':
+        menu()
+    elif escolha == '5':
+        exit()
 
-# Exibir as ferramentas após a modificação
-exibir_ferramentas()
+# # Função para exibir as ferramentas e seus detalhes
+# def exibir_ferramentas():
+#     print("\nFerramentas armazenadas:")
+#     for nome, detalhes in ferramentas.items():
+#         print(f"\n🔧 {nome}:")
+#         for chave, valor in detalhes.items():
+#             print(f"  {chave}: {valor}")
+
+# # Função para modificar uma ferramenta
+# def alterar_ferramenta():
+#     nome = input("\nDigite o nome da ferramenta que deseja alterar: ")
+#     if nome in ferramentas:
+#         print("\nEscolha o que deseja alterar:")
+#         print("1 - Descrição")
+#         print("2 - Material")
+#         print("3 - Utilidade")
+#         escolha = input("Digite o número da sua escolha: ")
+
+#         if escolha == "1":
+#             nova_descricao = input("Digite a nova descrição: ")
+#             ferramentas[nome]["Descrição"] = nova_descricao
+#         elif escolha == "2":
+#             novo_material = input("Digite o novo material: ")
+#             ferramentas[nome]["Material"] = novo_material
+#         elif escolha == "3":
+#             nova_utilidade = input("Digite a nova utilidade: ")
+#             ferramentas[nome]["Utilidade"] = nova_utilidade
+#         else:
+#             print("Escolha inválida.")
+#         print(f"\n🔄 Ferramenta '{nome}' atualizada com sucesso!")
+#     else:
+#         print("❌ Ferramenta não encontrada.")
+
+# # Exibir as ferramentas inicialmente
+# exibir_ferramentas()
+
+# # Modificar uma ferramenta
+# alterar_ferramenta()
+
+# # Exibir as ferramentas após a modificação
+# exibir_ferramentas()
