@@ -72,7 +72,7 @@ Ordenação padrão: apenas as chaves do dicionário são consideradas.
 ### **`key(opcional):`**
 Uma função que define as classificações de ordenação.
 Essa função é aplicada a cada elemento antes de ser comparada.
-Exemplo: key=lenordena com base no comprimento de elementos.
+Exemplo: key=len ordena com base no comprimento de elementos.
 
 ### **`reverse(opcional)`**:
 Um valor booleano que, quando definido como True, inverte a ordem da ordenação (ordem decrescente).
