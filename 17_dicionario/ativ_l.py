@@ -25,95 +25,124 @@ while True:
     print ('Opção 3 -  💻 Relatórios')
     print ('Opção 4 -  ❌ Sair')
 
+
+
     escolha = input('Digite sua escolha: ')
     if escolha == '1':
         print('-'*80)
         print('CADASTRANDO FILMES')
         contador = len(filmes)
         while True:
-            # ENTRADA DE DADOS COM VALIDAÇÃO
-            while True:
-                filme = input('Digite o nome do Filme: ').strip().lower() 
-                if filme == '':
-                    print('-'*80)
-                    print('🚫 O título do filme não pode está em branco, tente novamente.')
-                    print('-'*80)
-                    continue
-                else:
-                    break    
-            while True:
-                genero = input('Digite o Genero do filme: ').strip().lower()
-                if genero == '' or genero.isnumeric():
-                    print('-'*80)
-                    print('🚫 Erro, não pode está em branco ou ter somente número, tente novamente.')
-                    print('-'*80)
-                    continue
-                else:
-                    break
-            while True:
-                try:
-                    duracao = input('Digite a Duracao do filme, (ex: 2:30): ').strip()
-                    aux_duracao = duracao.split(':')
-                    if duracao == '' or len(aux_duracao[0]) > 2 or len(aux_duracao[1]) > 2 or int(aux_duracao[0]) > 23 or int(aux_duracao[1]) > 59 : # quantidade de digitos da hora e dos minutos
+            
+            
+            for i in range (5):
+            
+                # ENTRADA DE DADOS COM VALIDAÇÃO
+                while True:
+                    filme = input('Digite o nome do Filme: ').strip().lower() 
+                    if filme == '':
                         print('-'*80)
-                        print('🚫 Algo deu errado, possíveis erros:')
-                        print('- horas e minutos só pode ter 2 dígitos')
-                        print('- horas: 1 à 23, minutos: 1 à 59.')
-                        print('- Escrever letras no lugar de números')
-                        print('- Deixar em branco, etc...')
-                        print('▶ Tente novamente')
+                        print('🚫 O título do filme não pode está em branco, tente novamente.')
                         print('-'*80)
                         continue
                     else:
-                        break   
-                except: # quando o programa tenta converter o valor da duração de string para inteiro , caso dar algum erro , vem para essa parte do programa.
-                    print('-'*80)
-                    print('🚫 Algo deu errado, possíveis erros:')
-                    print('- horas e minutos só podem ter 2 dígitos')
-                    print('- horas: 1 à 23, minutos: 1 à 59.')
-                    print('- Escrever letras no lugar de números')
-                    print('- Deixar em branco,  etc...')
-                    print('▶ Tente novamente')
-                    print('-'*80)
-                    continue
-            while True:
-                classificacao = input('Digite a Classificacao do filme: ').strip().lower()
-                if classificacao == '':
-                    print('-'*80)
-                    print('🚫 A classificação do filme não pode está em branco, tente novamente.')
-                    print('-'*80)
+                        break    
+                while True:
+                    genero = input('Digite o Genero do filme: ').strip().lower()
+                    if genero == '' or genero.isnumeric():
+                        print('-'*80)
+                        print('🚫 Erro, não pode está em branco ou ter somente número, tente novamente.')
+                        print('-'*80)
+                        continue
+                    else:
+                        break
+                while True:
+                    try:
+                        duracao = input('Digite a Duracao do filme, (ex: 2:30): ').strip()
+                        aux_duracao = duracao.split(':')
+                        if duracao == '' or len(aux_duracao[0]) > 2 or len(aux_duracao[1]) > 2 or int(aux_duracao[0]) > 23 or int(aux_duracao[1]) > 59 : # quantidade de digitos da hora e dos minutos
+                            print('-'*80)
+                            print('🚫 Algo deu errado, possíveis erros:')
+                            print('- horas e minutos só pode ter 2 dígitos')
+                            print('- horas: 1 à 23, minutos: 1 à 59.')
+                            print('- Escrever letras no lugar de números')
+                            print('- Deixar em branco, etc...')
+                            print('▶ Tente novamente')
+                            print('-'*80)
+                            continue
+                        else:
+                            break   
+                    except: # quando o programa tenta converter o valor da duração de string para inteiro , caso dar algum erro , vem para essa parte do programa.
+                        print('-'*80)
+                        print('🚫 Algo deu errado, possíveis erros:')
+                        print('- horas e minutos só podem ter 2 dígitos')
+                        print('- horas: 1 à 23, minutos: 1 à 59.')
+                        print('- Escrever letras no lugar de números')
+                        print('- Deixar em branco,  etc...')
+                        print('▶ Tente novamente')
+                        print('-'*80)
+                        continue
+                while True:
+                    classificacao = input('Digite a Classificacao do filme: ').strip().lower()
+                    if classificacao == '':
+                        print('-'*80)
+                        print('🚫 A classificação do filme não pode está em branco, tente novamente.')
+                        print('-'*80)
+                        continue
+                    else:
+                        break    
+                # inclusão dos dados no cadastro
+                filmes.append({'Filme':filme, 'Genero':genero, 'Duracao':duracao, 'Classificacao':classificacao})
+                print('-'*80)
+               
+               
+                opcao = input('Deseja continuar o cadastrando filmes (S/N) ? ').strip().lower()  # continuar cadastrando
+                if opcao == 's':
                     continue
                 else:
-                    break    
-            # inclusão dos dados no cadastro
-            filmes.append({'Filme':filme, 'Genero':genero, 'Duracao':duracao, 'Classificacao':classificacao})
+                    break
+        
+        
+        
+        
+        
+        
+            # Quantidade de filmes 
             print('-'*80)
-            opcao = input('Deseja continuar o cadastrando filmes (S/N) ? ').strip().lower()  # continuar cadastrando
-            if opcao == 's':
-                continue
-            else:
-                break
-        # Quantidade de filmes 
-        print('-'*80)
-        print('RESUMO:')
-        print(f'O cadastro possui {len(filmes)} filmes:')
-        # filme com duração superior a 2 horas 
-        for filme in filmes:
-            hora_minuto = filme['Duracao'].split(':') # vira uma lista de 2 itens do tipo string, com a hora e o munito separados. 
-            hora = int(hora_minuto[0]) * 60
-            minuto = int(hora_minuto[1])
-            tempo = hora + minuto
-            if tempo > 120:
-                duracao_maior.update({filme["Filme"]:filme["Duracao"]})
-        print(f'{len(duracao_maior)} filmes com duração superior a 2 horas:')
-        # classificação livre
-        aux_classificacao = {}
-        for filme in filmes:
-            if filme['Classificacao'].lower() == "livre":
-                aux_classificacao.update({filme['Filme']:filme['Classificacao']})
-        print(f'{len(aux_classificacao)} filmes com Classificação Livre:')
-        print('OBS: Para maiores detalhes consulte em relatórios')
-        print('-'*80)
+            print('RESUMO:')
+            print(f'O cadastro possui {len(filmes)} filmes:')
+            # filme com duração superior a 2 horas 
+            for filme in filmes:
+                hora_minuto = filme['Duracao'].split(':') # vira uma lista de 2 itens do tipo string, com a hora e o munito separados. 
+                hora = int(hora_minuto[0]) * 60
+                minuto = int(hora_minuto[1])
+                tempo = hora + minuto
+                if tempo > 120:
+                    duracao_maior.update({filme["Filme"]:filme["Duracao"]})
+            print(f'{len(duracao_maior)} filmes com duração superior a 2 horas:')
+            # classificação livre
+            aux_classificacao = {}
+            for filme in filmes:
+                if filme['Classificacao'].lower() == "livre":
+                    aux_classificacao.update({filme['Filme']:filme['Classificacao']})
+            print(f'{len(aux_classificacao)} filmes com Classificação Livre:')
+            print('OBS: Para maiores detalhes consulte em relatórios')
+            print('-'*80)
+   
+   
+            break
+            
+            # opcao = input('Deseja continuar o cadastrando filmes (S/N) ? ').strip().lower()  # continuar cadastrando
+            # if opcao == 's':
+            #     continue
+            # else:
+            #     break
+
+   
+   
+   
+   
+   
     elif escolha == '2':
         resultado = 0
         print('-'*80)
