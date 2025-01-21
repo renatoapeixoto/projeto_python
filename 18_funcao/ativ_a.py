@@ -3,39 +3,6 @@
 # de números ímpares.
 
 # função para ver numeros pares e impares. e suas quantidades 
-numeros = []
-def numeros_pares_impares (numeros):
-    pares = []
-    impares = []
-    qtd_pares = 0
-    qtd_impares = 0
-    for numero in numeros:
-        if numero % 2 == 0:
-            pares.append(numero)
-            qtd_pares +=1
-        else:
-            impares.append(impares)
-            qtd_impares =+ 1
-    return (pares, qtd_pares, impares, qtd_impares)
-
-
-numero = input("Dgite algm numero: ")
-
-
-
-
-numero_impar = input("Números ímpares: ")
-numero_"Quantidade de pares:", qtd_pares)
-print("Quantidade de ímpares:", qtd_impares)
-
-
-
-
-
-
-
-
-
 def separar_pares_impares(lista_numeros):
     # Inicializando as listas e os contadores
     pares = []
