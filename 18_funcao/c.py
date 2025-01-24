@@ -1,12 +1,20 @@
 # Crie uma função que verifica se uma aluno(a) está cadastrado ou não em um dicionário. 
 # Se estiver cadastrado, imprima o nome desse aluno e o resto dos seus dados. 
 # O dicionário deverá conter nome, matrícula e a data de nascimento do aluno.
+import os
+import platform
+
+
+# Limpa a tela (no Windows)
+if platform.system() == "Windows":
+    os.system('cls')
+else:
+    os.system('clear')
 
 cadastro = []
-
 def cadastrar_aluno(nome=None, matricula=None, data_nascimento=None):
     while True:
-        # Entrada de dados se os parâmetros não forem fornecidos
+        # Entrada de dados se os parâmetros não forem fornecidos, posso fazer um cadastro interativo o direto.
         if nome is None: #  Verifica se dois objetos apontam para o mesmo local na memória (ou seja, se são o mesmo objeto).
             nome = input('Digite o nome do aluno............: ')
         if matricula is None:
@@ -52,7 +60,8 @@ def imprimir_aluno(cadastro):
 
 # Executando o programa
 resultado = cadastrar_aluno()  # Cadastro interativo
-cadastrar_aluno(nome='Renato', data_nascimento='01/08/1978', matricula='2510203')  # Cadastro direto
+# cadastrar_aluno(nome='Renato', data_nascimento='01/08/1978', matricula='2510203')  # Cadastro direto
+
 imprimir_aluno(resultado)
 consultar_aluno(resultado)
 
